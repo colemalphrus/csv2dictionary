@@ -1,5 +1,5 @@
 # timeconMT
-A simple time conversion by Malphrus Tech
+A conversion from csv file to dictionary by Malphrus Tech
 
 ## Usage
 
