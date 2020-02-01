@@ -4,7 +4,7 @@ class CsvBrain(object):
     """docstring"""
     dict = []
     def __init__(self, csv_file):
-        with open('test.csv', mode='r', encoding='utf-8-sig') as f:
+        with open(csv_file, mode='r', encoding='utf-8-sig') as f:
             self.csv_file = f.read()
         io_string = io.StringIO(self.csv_file)
         row_count = 0
