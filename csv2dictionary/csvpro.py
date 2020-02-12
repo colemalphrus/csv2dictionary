@@ -22,4 +22,10 @@ class CsvBrain(object):
             row_count += 1
             self.dict = list_of_dictionaries
 
-     
+    def search(self, search_string):
+        results = []
+        for obj in self.dict:
+            for key in obj:
+                if search_string in obj[key]:
+                    results.append(obj)
+        return results

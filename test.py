@@ -26,6 +26,17 @@ class Test_Main(unittest.TestCase):
         case1 = CsvBrain('test.csv')
         for index in range(len(case1_key)):
             self.assertDictEqual(case1.dict[index], case1_key[index])
+
+    def test_search(self):
+        case2_key = [
+            {
+                'first': 'effie',
+                'last': 'malphrus',
+                'age': '0'
+            }
+        ]
+        case2 = CsvBrain('test.csv')
+        self.assertEqual(case2.search('effie'), case2_key)
         
 
 if __name__ == "__main__":
