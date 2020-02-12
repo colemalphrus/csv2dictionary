@@ -5,11 +5,12 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="csv2dictionary",
-    version="0.0.1",
+    version="0.0.2",
     author="Cole Malphrus",
     author_email="cole@malphrus.tech",
     description="converts csv to a dictionary",
     long_description=long_description,
+    long_description_content_type='text/markdown',
     url="https://github.com/colemalphrus/csv2dictionary",
     packages=setuptools.find_packages(),
     classifiers=[

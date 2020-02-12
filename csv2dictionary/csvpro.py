@@ -2,8 +2,8 @@ import io, csv
 
 class CsvBrain(object):
     """docstring"""
-    dict = []
     def __init__(self, csv_file):
+        self.data = []
         with open(csv_file, mode='r', encoding='utf-8-sig') as f:
             self.csv_file = f.read()
         io_string = io.StringIO(self.csv_file)
@@ -20,12 +20,20 @@ class CsvBrain(object):
                     column_index +=1
                 list_of_dictionaries.append(row_dictionary)
             row_count += 1
-            self.dict = list_of_dictionaries
+            self.data = list_of_dictionaries
 
     def search(self, search_string):
         results = []
-        for obj in self.dict:
+        for obj in self.data:
             for key in obj:
                 if search_string in obj[key]:
                     results.append(obj)
         return results
+
+    def castInt(self, column):
+        for obj in self.data:
+            obj[column] = int(obj[column])
+
+    def castFloat(self, column):
+        for obj in self.data:
+            obj[column] = float(obj[column])
