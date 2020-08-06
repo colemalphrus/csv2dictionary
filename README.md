@@ -1,4 +1,4 @@
-# timeconMT
+# csv2dictionary
 A conversion from csv file to dictionary by Malphrus Tech
 
 ## Usage
